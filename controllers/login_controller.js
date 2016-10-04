@@ -5,7 +5,11 @@
     .module("chatApp")
     .controller("LoginController", LoginController);
 
-    LoginController.$inject($state, userDataService, $log) {
+
+    LoginController.$inject = ["$state", "userDataService", "$log"];
+
+
+    function LoginController($state, userDataService, $log) {
       var vm = this;
 
       vm.user = userDataService;
@@ -23,7 +27,7 @@
         vm.userHold.name = "";
 
         $state.go("allChats");
-      }
-    }
+      };
+    };
 
 })();
