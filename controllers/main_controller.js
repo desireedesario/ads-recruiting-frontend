@@ -17,7 +17,7 @@
       $log.debug("Logging out:", vm.user.name);
 
       vm.user.name = "";
-      $state.go("allChats");
+      $state.go("homePage");
     }
 
     vm.$state = $state;

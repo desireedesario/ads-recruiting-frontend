@@ -9,21 +9,23 @@
 
   function ChatsController($state, userDataService, $log, $http){
     var vm = this;
-
     vm.user = userDataService;
+    vm.add = addChat;
+    vm.newChat = {chatName: ""};
 
-    vm.chats = [];
+    vm.all = [
+      {chatName: "Sammy and Tina"},
+      {chatName: "Spanish Class 101"},
+      {chatName: "Mario Party Party"},
+      {chatName: "Mom and Dad"}
+    ]
 
-    vm.newChats = {
-      content: ""
+    $log.log(vm.all)
+
+    function addChat(){
+      vm.all.push(vm.newChat)
+      vm.newChat = {chatName: ""}
     }
 
-    vm.deleteChat = deleteChat;
-    vm.updateChat = updateChat;
-    vm.postChat = postChat;
-    vm.showChat = showChat;
-    vm.resetEditChat = resetEditChat;
-
-    
   }
-})
+})();

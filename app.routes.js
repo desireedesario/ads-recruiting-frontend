@@ -9,16 +9,22 @@
 
   function AppRoutes($stateProvider, $urlRouteProvider) {
     $stateProvider
-      .state("allChats", {
+      .state("homePage", {
         url: "/",
-        templateUrl: "./templates/allChats.html",
+        templateUrl: "./templates/home.html",
         controller: "LoginController",
         controllerAs: "vm"
       })
-      .state("singleChat", {
-        url: "/chat",
-        templateUrl: "./templates/singleChat",
+      .state("allChats", {
+        url: "/chats",
+        templateUrl: "./templates/allChats.html",
         controller: "ChatsController",
+        controllerAs: "vm"
+      })
+      .state("chatDetails", {
+        url: "/chatDetails",
+        templateUrl: "./templates/chatDetails.html",
+        controller: "ChatDetailsController",
         controllerAs: "vm"
       });
 

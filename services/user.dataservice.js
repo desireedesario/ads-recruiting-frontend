@@ -9,7 +9,7 @@
 
   function userDataService() {
     var user = {
-      name:        "",
+      name: "",
       isLoggedIn:  isLoggedIn
     };
 

@@ -1,5 +1,4 @@
 (function() {
-  angular.module('chatApp', [
-    "ui.router"
-  ]);
+  angular
+    .module('chatApp', ["ui.router"])
 })();

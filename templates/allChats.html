@@ -1,0 +1,21 @@
+<br>
+<h3 class="cen-jus thumb-head">Check out your chats</h3>
+<br>
+<div class="row">
+  <ul>
+    <li ng-repeat="chat in vm.all">
+      <div class="col-md-4">
+        <div class="thumbnail">
+          <h4 class="thumb-head">{{chat.title}}</h4>
+          <hr>
+          <div class="caption">
+            <p>
+              {{ chat.chatName }}
+            </p>
+            <a class="btn btn-primary" ui-sref="chatDetails">View this chat</a>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
