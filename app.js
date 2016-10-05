@@ -1,4 +1,4 @@
 (function() {
   angular
-    .module('chatApp', ["ui.router"])
+    .module('chatApp', ["ngCookies", "ui.router"])
 })();

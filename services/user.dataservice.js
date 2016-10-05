@@ -5,11 +5,11 @@
     .module("chatApp")
     .factory("userDataService", userDataService);
 
-  userDataService.$inject = [];
+  userDataService.$inject = ["$cookies"];
 
-  function userDataService() {
+  function userDataService($cookies) {
     var user = {
-      name: "",
+      name: $cookies.get('userName'),
       isLoggedIn:  isLoggedIn
     };
 

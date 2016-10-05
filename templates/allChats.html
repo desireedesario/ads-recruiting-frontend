@@ -12,6 +12,14 @@
             <p>
               {{ chat.content }}
             </p>
+            <p>
+              Participants Involved
+              <br>
+              {{vm.user.name}}
+            </p>
+            <p ng-repeat="participant in chat.participants">
+              {{participant}}
+            </p>
             <a class="btn btn-primary" ui-sref="chatDetails({title:chat.chatName, content: chat.content})">View this chat</a>
           </div>
         </div>

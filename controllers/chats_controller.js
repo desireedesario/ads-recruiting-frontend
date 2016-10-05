@@ -14,13 +14,15 @@
     vm.add = addChat;
     vm.newChat = {chatName: ""};
 
-    //make sure that the 
+    //make sure that the
     $log.log(vm.chat.all)
 
     function addChat(){
       vm.all.push(vm.newChat)
-      vm.newChat = {chatName: ""}
+      vm.newChat = {chatName: "", content: "", participants: ""}
     }
+
+
 
   }
 })();
