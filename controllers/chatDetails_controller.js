@@ -37,15 +37,12 @@
     vm.state = $state.current
     vm.params = $stateParams;
 
-    // Fill the form to edit a message
-
-
-
     //delete a message
     function remove(removeMsg) {
       vm.allMsgs = vm.allMsgs.filter(function(msg) {
         return hint.id != removeHint.id;
       })
     };
+
   };
 })();

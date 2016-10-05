@@ -11,15 +11,16 @@
     var vm = this;
     vm.user = userDataService;
     vm.chat = chatDataService;
-    vm.add = addChat;
-    vm.newChat = {chatName: ""};
+    vm.addChat = addChat;
+    vm.newChat = {chatName: "", content: "", participants: ""};
 
     //make sure that the
     $log.log(vm.chat.all)
 
     function addChat(){
-      vm.all.push(vm.newChat)
-      vm.newChat = {chatName: "", content: "", participants: ""}
+      vm.newChat.participants = vm.newChat.participants.split(' ');
+      vm.chat.all.push(vm.newChat)
+      vm.newChat = {chatName: "", content: "", participants: ""};
     }
 
 
