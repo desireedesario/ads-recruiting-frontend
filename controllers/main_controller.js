@@ -19,7 +19,7 @@
       $cookies.remove('userName')
       //when user logs in go to chats
       vm.user.name = "";
-      $state.go("chatList");
+      $state.go("homePage");
 
 
     }

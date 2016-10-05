@@ -1,16 +1,14 @@
 <div class="cen-jus" ng-hide="vm.user.isLoggedIn()">
-  <br>
-  <h3>Welcome to the Whats Up Chat App</h3>
-  <h6>First tell your buddies who you are</h6>
-  <br>
-  <p><strong>To better enjoy the Whats Up Chat App, give an awesome identity to give people a clue about you</strong></p>
+  <h3>Welcome to the Chat App</h3>
+  <h6>First, tell your buddies who you are</h6>
+  <p><strong>To better enjoy the Chat App, give yourself an awesome identity to give people a clue about who you are</strong></p>
   <br>
   <form class="form-inline" ng-submit="vm.logIn()">
     <div class="form-group">
       <label>Name: </label>
       <input type="text" id="inputName1" class="form-control" placeholder="My name is.." ng-model="vm.userHold.name" required>
     </div>
-      <button class="btn btn-primary submit-login-button custom-font" type="submit">Enter Whats Up Chat</button>
+      <button class="btn btn-info submit-login-button" type="submit">CHECK OUT YOUR CHATS</button>
   </form>
 
   <div class="cen-jus" ng-show="vm.user.isLoggedIn()">

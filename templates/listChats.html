@@ -1,0 +1,34 @@
+<br>
+<h2 class="cen-jus thumb-head">
+  <u>Check out your chats
+  </u>
+</h2>
+<br>
+<div class="row">
+  <ul>
+    <li ng-repeat="chat in vm.chat.all">
+      <div class="panel panel-info">
+        <div class="panel-body">
+          <!-- <div class="col-md-4"> -->
+            <h4 class="thumb-head cen-jus">{{chat.chatName}}</h4>
+            <hr>
+            <div class="caption">
+              <p>
+                {{ chat.content }}
+              </p>
+              <p>
+                Participants Involved
+              </p>
+              <p>
+                {{vm.user.name}}
+              <p ng-repeat="participant in chat.participants">
+                {{participant}}
+              </p>
+              <a class="btn btn-primary" ui-sref="chatDetails({title:chat.chatName, content: chat.content})">View this chat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

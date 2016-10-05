@@ -9,15 +9,15 @@
 
   function AppRoutes($stateProvider, $urlRouteProvider) {
     $stateProvider
-      .state("chatList", {
+      .state("homePage", {
         url: "/",
         templateUrl: "./templates/home.html",
         controller: "LoginController",
         controllerAs: "vm"
       })
-      .state("allChats", {
+      .state("listChats", {
         url: "/chats",
-        templateUrl: "./templates/allChats.html",
+        templateUrl: "./templates/listChats.html",
         controller: "ChatsController",
         controllerAs: "vm"
       })

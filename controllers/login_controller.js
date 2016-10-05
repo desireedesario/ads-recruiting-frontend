@@ -28,7 +28,7 @@
 
         $cookies.put('userName', vm.user.name)
 
-        $state.go("allChats");
+        $state.go("listChats");
       };
     };
 

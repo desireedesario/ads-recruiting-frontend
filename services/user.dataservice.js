@@ -16,7 +16,9 @@
     return user;
 
     function isLoggedIn() {
-      return user.name.length !== 0;
+      if (user.name) {
+        return user.name.length !== 0;
+      }
     }
   }
 
