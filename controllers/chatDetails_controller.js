@@ -5,17 +5,20 @@
     .module("chatApp")
     .controller("ChatDetailsController", ChatDetailsController);
 
-    ChatDetailsController.$inject = ["userDataService"];
+    ChatDetailsController.$inject = ["userDataService", "chatDataService", "$state", "$stateParams"];
 
-  function ChatDetailsController(userDataService) {
+  function ChatDetailsController(userDataService, chatDataService, $state, $stateParams) {
    var vm = this;
    vm.userDataService = userDataService;
+   vm.chatDataService = chatDataService;
+   vm.title = $stateParams.title;
+   vm.content = $stateParams.content;
    vm.allMsgs = [];
    vm.newMsg = {
       id: 0,
       user: vm.userDataService,
       content: ""
-    }
+    };
     vm.addMsg = addMsg;
     vm.remove  = remove;
 
@@ -25,6 +28,14 @@
       content: vm.newMsg.content
       });
     }
+
+    // caps out allMsgs at 200
+    while (vm.allMsgs.length > 200) {
+      vm.allMsgs.shift();
+    }
+
+    vm.state = $state.current
+    vm.params = $stateParams;
 
     // Fill the form to edit a message
 

@@ -3,16 +3,16 @@
 <br>
 <div class="row">
   <ul>
-    <li ng-repeat="chat in vm.all">
+    <li ng-repeat="chat in vm.chat.all">
       <div class="col-md-4">
         <div class="thumbnail">
-          <h4 class="thumb-head">{{chat.title}}</h4>
+          <h4 class="thumb-head">{{chat.chatName}}</h4>
           <hr>
           <div class="caption">
             <p>
-              {{ chat.chatName }}
+              {{ chat.content }}
             </p>
-            <a class="btn btn-primary" ui-sref="chatDetails">View this chat</a>
+            <a class="btn btn-primary" ui-sref="chatDetails({title:chat.chatName, content: chat.content})">View this chat</a>
           </div>
         </div>
       </div>
