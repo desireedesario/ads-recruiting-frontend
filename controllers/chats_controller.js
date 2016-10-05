@@ -23,7 +23,5 @@
       vm.newChat = {chatName: "", content: "", participants: ""};
     }
 
-
-
   }
 })();

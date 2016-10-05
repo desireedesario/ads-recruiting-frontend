@@ -1,29 +1,53 @@
-<div>
+  <h2 class="cen-jus thumb-head">
   {{vm.title}}
-  <br>
-  {{vm.content}}
-  <br>
-  <form ng-submit="vm.addMsg()">
-    <div>
-      <input type="text" placeholder="send a reply" ng-model="vm.newMsg.content">
-    </div>
-    <div>
-      Users Online:
+  </h2>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="caption">
+          Chat consist of:
+        </h4>
+        <p ng-repeat="participants in vm.participants">
+          {{participants}}
+        </p>
+        <hr style="magin: 0 3%;">
+      </div>
+      <div class="panel-body paddng">
+          <h4>
+            Users Online:
+          </h4>
+          <br>
+          {{vm.user.name}}
+      </div>
       <br>
-      {{user.name}}
+      <div class="panel panel-default" style="padding:1%; background-color:#dbeeff;">
+        <ul class="pre-scrollable">
+          <h4>
+            <img src="../assets/img/comments.png">
+            CHAT MESSAGES
+          </h4>
+          <li style="margin-left:50%;">
+            <img src="../assets/img/userComment.png">
+            {{vm.content}}
+          </li>
+          <li ng-repeat="msg in vm.allMsgs">
+            <img src="../assets/img/userComment.png">
+            {{msg.content}}
+          </li>
+        </ul>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h4>
+            Write a new message
+          </h4>
+        </div>
+        <form ng-submit="vm.addMsg()">
+          <div class="panel-body paddng">
+            <input type="text" placeholder="send a reply" ng-model="vm.newMsg.content">
+            <input type="submit" value="send message" autocomplete='off' id='msg' placeholder='Type your message here'/>
+          </div>
+        </form>
+      </div>
     </div>
-    <div>
-      <input type="submit" value="send message" autocomplete='off' id='msg' placeholder='Type your message here'/>
-    </div>
-  </form>
-  <div>
-    <ul>
-      <li ng-repeat="msg in vm.allMsgs">
-        {{msg.content}}
-      </li>
-    </ul>
   </div>
-  <div class='pre-scrollable'>
-    <ul id='connected-users' style='display:inline-block;'></ul>
-  </div>
-  <div style="clear:both;"></div>

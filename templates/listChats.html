@@ -22,10 +22,10 @@
           </p>
           <p>
             {{vm.user.name}}
-          <p ng-repeat="participant in chat.participants">
+          <p ng-repeat="participant in vm.chat.participants">
               {{participant}}
           </p>
-          <a class="btn btn-primary" ui-sref="chatDetails({title:chat.chatName, content: chat.content})">View this chat</a>
+          <a class="btn btn-primary" ui-sref="chatDetails({title:chat.chatName, content: chat.content, participants: chat.participants})">View this chat</a>
 
         </div>
       </div>

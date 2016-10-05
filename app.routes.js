@@ -22,7 +22,7 @@
         controllerAs: "vm"
       })
       .state("chatDetails", {
-        url: "/chatDetails/:title?content",
+        url: "/chatDetails/:title?content?participants",
         templateUrl: "./templates/chatDetails.html",
         controller: "ChatDetailsController",
         controllerAs: "vm"

@@ -9,10 +9,11 @@
 
   function ChatDetailsController(userDataService, chatDataService, $state, $stateParams) {
    var vm = this;
-   vm.userDataService = userDataService;
-   vm.chatDataService = chatDataService;
+   vm.user = userDataService;
+   vm.chat = chatDataService;
    vm.title = $stateParams.title;
    vm.content = $stateParams.content;
+   vm.participants = $stateParams.participants;
    vm.allMsgs = [];
    vm.newMsg = {
       id: 0,
@@ -21,6 +22,11 @@
     };
     vm.addMsg = addMsg;
     vm.remove  = remove;
+
+    // GET
+    // POST
+    // PUT
+    // DELETE
 
     //create a message
     function addMsg() {
