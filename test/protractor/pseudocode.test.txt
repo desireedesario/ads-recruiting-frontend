@@ -1,0 +1,25 @@
+before each function
+1) open the browser
+
+index.html
+must consist of elements
+1) open the browser
+2) check if the header and footer are there
+
+the home.html must be active and the first page you see
+1) open the browser
+2) check if the ui-router is loading the correct PAGE
+3) check for the element
+
+home.html
+
+login feature
+1) open the browser
+2) enter a user name
+3) click the submit button
+4) redirect to the users chat lists
+
+login name: if the user name length is not greater than zero, user cannot log in
+1) open the browser
+2) click the submit button
+3) expect to not redirect to the homepage

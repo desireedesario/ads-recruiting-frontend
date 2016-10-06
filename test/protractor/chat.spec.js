@@ -1,9 +1,21 @@
 describe('chatApp homepage', function() {
-  it('should take the named user to chatlists', function() {
-    browser.get('file:///Users/pikachu/Dropbox/ads-recruiting-frontend/index.html#/');
+  it('should greet the named user', function() {
+    browser.get('http://desireedesario.com/ads-recruiting-frontend');
 
-    expect(browser.getTitle()).toEqual('CHAT UI PAGE');
+    //Find the element with ng-model=vm.userHold.name and fill in with Alex
+    element(by.model('vm.userHold.name')).sendKeys('Alex');
+    // Find the first (and only) button on the page and click it
+    element(by.css(':button')).click();
+    // Ensure fields contain what we've entered
+    expect(model.getAttribute('vm.userHold.name')).toEqual('Alex');
+
+    // Click to sign in - waiting for Angular as it is manually bootstrapped.
+    userLoginBtn.click().then(function() {
+      browser.waitForAngular();
+      expect(browser.driver.getCurrentUrl()).toMatch('http://desireedesario.com/ads-recruiting-frontend/#/chats');
+    }, 10000);
   });
+});
 
   // describe('todo list', function() {
   //   var todoList;
@@ -30,4 +42,4 @@ describe('chatApp homepage', function() {
   //     expect(todoList.get(2).getText()).toEqual('write a protractor test');
   //   });
   // });
-});
+// });

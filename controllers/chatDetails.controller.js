@@ -10,6 +10,7 @@
   function ChatDetailsController(userDataService, chatDataService, $state, $stateParams) {
    var vm = this;
    vm.user = userDataService;
+   vm.clearForm = clearForm;
    vm.chat = chatDataService;
    vm.state = $state.current;
    vm.params = $stateParams;
@@ -30,12 +31,21 @@
       vm.allMsgs.push({
       content: vm.newMsg.content
       });
+      var newContent = $.grep(vm.chat.all, function(x){return x.title == vm.title})
+      newContent.push(vm.newMsg.content)
+      clearForm();
     }
 
-    // caps out allMsgs at 200
-    while (vm.allMsgs.length > 200) {
-      vm.allMsgs.shift();
+    function clearForm() {
+      document.getElementById("comment").$setPristine;
+      vm.newMsg.content = '';
+
     }
+
+    // // caps out allMsgs at 200
+    // while (vm.allMsgs.length > 200) {
+    //   vm.allMsgs.shift();
+    // }
 
     //delete a message
     function remove(removeMsg) {

@@ -25,11 +25,11 @@
             <img src="../assets/img/comments.png">
             CHAT MESSAGES
           </h4>
-          <li style="margin-left:50%;">
+          <li style="float: right;clear:both;">
             <img src="../assets/img/userComment.png">
             {{vm.content}}
           </li>
-          <li ng-repeat="msg in vm.allMsgs">
+          <li ng-repeat="msg in vm.allMsgs" style="float: left;clear:both;">
             <img src="../assets/img/userComment.png">
             {{msg.content}}
           </li>
@@ -43,7 +43,7 @@
         </div>
         <form ng-submit="vm.addMsg()">
           <div class="panel-body paddng form-group">
-            <input type="text" class="form-control" placeholder="send a reply" ng-model="vm.newMsg.content"><br>
+            <input type="text" class="form-control" id="comment" placeholder="send a reply" ng-model="vm.newMsg.content"><br>
             <small><em>(For Mac: press &#8984; &#8963; and space for emoticons)</em></small><br>
             <input type="submit" value="send message" autocomplete='off' id='msg' placeholder='Type your message here'/>
           </div>

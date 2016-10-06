@@ -4,6 +4,11 @@
   src: url('../fonts/Avalon Bold T..ttf') format('truetype');
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #heading-text {
   font-family: 'avalonbold';
   font-size: 5.3rem;
@@ -23,6 +28,7 @@ body {
   background-image: url("../img/unityBackground.png");
   background-repeat: no-repeat;
   background-position: center;
+  font-size: 2vw;
 }
 
 .cen-jus {
@@ -31,12 +37,7 @@ body {
 
 .btn{
   white-space: normal;
-  width: 50%;
-}
-
-.btn{
-  white-space: normal;
-  width: 100%;
+  width: 80%;
 }
 
 footer {
@@ -82,10 +83,16 @@ main {
 .panel-info {
   border-radius: 25px;
   background-color: transparent;
-  width: 40%;
-  float: left;
-  margin: 4%;
-  padding: 2%;
+  width: 100%;
+}
+
+.chatInfo {
+  float:left;
+}
+
+ul {
+  margin-right: 5%;
+  text-align: center;
 }
 
 /* chat details */
