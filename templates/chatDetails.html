@@ -19,7 +19,7 @@
         </p>
       </div>
       <br>
-      <div class="panel panel-default" style="padding:1%; background-color:#dbeeff;">
+      <div class="panel panel-default" style="padding:1%; background-color:rgba(40, 149, 171,0.4);">
         <ul class="pre-scrollable">
           <h4>
             <img src="../assets/img/comments.png">
@@ -36,14 +36,14 @@
         </ul>
       </div>
       <div class="panel panel-primary">
-        <div class="panel-heading">
+        <div class="panel-heading" style="background-color: #2895ab;">
           <h4>
             Write a new message
           </h4>
         </div>
         <form ng-submit="vm.addMsg()">
-          <div class="panel-body paddng">
-            <input type="text" placeholder="send a reply" ng-model="vm.newMsg.content"><br>
+          <div class="panel-body paddng form-group">
+            <input type="text" class="form-control" placeholder="send a reply" ng-model="vm.newMsg.content"><br>
             <small><em>(For Mac: press &#8984; &#8963; and space for emoticons)</em></small><br>
             <input type="submit" value="send message" autocomplete='off' id='msg' placeholder='Type your message here'/>
           </div>
