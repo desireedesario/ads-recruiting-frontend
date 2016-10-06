@@ -1,21 +1,52 @@
-// An example configuration file.
-exports.config = {
-  directConnect: true,
+var util = require('util');
 
-  // Capabilities to be passed to the webdriver instance.
-  capabilities: {
-    'browserName': 'chrome'
-  },
+describe('chatApp homepage', function() {
+  var ptor;
 
-  // Framework to use. Jasmine is recommended.
-  framework: 'jasmine',
+  // beforeEach(function() {
+  //   ptor = protractor.getInstance();
+  //   ptor.get("#/");
+  // )};
 
-  // Spec patterns are relative to the current working directory when
-  // protractor is called.
-  specs: ['example_spec.js'],
+  it("should load up the page", function(){
+    browser.get('http://localhost:8000');
+  });
+});
 
-  // Options to be passed to Jasmine.
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
-  }
-};
+// describe('angularjs homepage', function() {
+//   it('should greet the named user', function() {
+//     browser.get('http://www.angularjs.org');
+//
+//     element(by.model('yourName')).sendKeys('Julie');
+//
+//     var greeting = element(by.binding('yourName'));
+//
+//     expect(greeting.getText()).toEqual('Hello Julie!');
+//   });
+//
+//   describe('todo list', function() {
+//     var todoList;
+//
+//     beforeEach(function() {
+//       browser.get('http://www.angularjs.org');
+//
+//       todoList = element.all(by.repeater('todo in todoList.todos'));
+//     });
+//
+//     it('should list todos', function() {
+//       expect(todoList.count()).toEqual(2);
+//       expect(todoList.get(1).getText()).toEqual('build an angular app');
+//     });
+//
+//     it('should add a todo', function() {
+//       var addTodo = element(by.model('todoList.todoText'));
+//       var addButton = element(by.css('[value="add"]'));
+//
+//       addTodo.sendKeys('write a protractor test');
+//       addButton.click();
+//
+//       expect(todoList.count()).toEqual(3);
+//       expect(todoList.get(2).getText()).toEqual('write a protractor test');
+//     });
+//   });
+// });

@@ -1,37 +1,21 @@
-describe('chatApp homepage', function() {
-  it('show the user their chats', function() {
-    browser.get('http://localhost:8000/');
+// An example configuration file.
+exports.config = {
+  directConnect: true,
 
-    element(by.model('yourName')).sendKeys('Julie');
+  // Capabilities to be passed to the webdriver instance.
+  capabilities: {
+    'browserName': 'chrome'
+  },
 
-    var greeting = element(by.binding('yourName'));
+  // Framework to use. Jasmine is recommended.
+  framework: 'jasmine',
 
-    expect(greeting.getText()).toEqual('Hello Julie!');
-  });
+  // Spec patterns are relative to the current working directory when
+  // protractor is called.
+  specs: ['chat.spec.js'],
 
-  describe('todo list', function() {
-    var todoList;
-
-    beforeEach(function() {
-      browser.get('http://www.angularjs.org');
-
-      todoList = element.all(by.repeater('todo in todoList.todos'));
-    });
-
-    it('should list todos', function() {
-      expect(todoList.count()).toEqual(2);
-      expect(todoList.get(1).getText()).toEqual('build an angular app');
-    });
-
-    it('should add a todo', function() {
-      var addTodo = element(by.model('todoList.todoText'));
-      var addButton = element(by.css('[value="add"]'));
-
-      addTodo.sendKeys('write a protractor test');
-      addButton.click();
-
-      expect(todoList.count()).toEqual(3);
-      expect(todoList.get(2).getText()).toEqual('write a protractor test');
-    });
-  });
-});
+  // Options to be passed to Jasmine.
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 30000
+  }
+};
