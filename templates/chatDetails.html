@@ -4,20 +4,19 @@
   <div class="panel-group">
     <div class="panel panel-default">
       <div class="panel-heading">
+        <h4>
+          Users Online:
+        </h4>
+        <br>
+        {{vm.user.name}}
+      </div>
+      <div class="panel-body paddng">
         <h4 class="caption">
-          Chat consist of:
+          Chat also consist of:
         </h4>
         <p ng-repeat="participants in vm.participants">
           {{participants}}
         </p>
-        <hr style="magin: 0 3%;">
-      </div>
-      <div class="panel-body paddng">
-          <h4>
-            Users Online:
-          </h4>
-          <br>
-          {{vm.user.name}}
       </div>
       <br>
       <div class="panel panel-default" style="padding:1%; background-color:#dbeeff;">

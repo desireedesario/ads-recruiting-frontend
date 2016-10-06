@@ -40,6 +40,6 @@
     //delete a message
     function remove(removeMsg) {
       //ADD REMOVE FUNCTION HERE
-      })
+      }
   };
 })();

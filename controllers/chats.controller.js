@@ -5,16 +5,16 @@
     .module("chatApp")
     .controller("ChatsController", ChatsController);
 
-  ChatsController.$inject = ["$state", "userDataService", "chatDataService", "$log", "$http"];
+  ChatsController.$inject = ["$state", "userDataService", "chatDataService", "$log"];
 
-  function ChatsController($state, userDataService, chatDataService, $log, $http) {
+  function ChatsController($state, userDataService, chatDataService, $log) {
     var vm = this;
     vm.user = userDataService;
     vm.chat = chatDataService;
     vm.addChat = addChat;
     vm.newChat = {chatName: "", content: "", participants: ""};
 
-    //make sure that the chats are working
+    //make sure that the chats are iterating through
     $log.log(vm.chat.all)
 
     function addChat(){
