@@ -11,6 +11,8 @@
    var vm = this;
    vm.user = userDataService;
    vm.chat = chatDataService;
+   vm.state = $state.current;
+   vm.params = $stateParams;
    vm.title = $stateParams.title;
    vm.content = $stateParams.content;
    vm.participants = $stateParams.participants;
@@ -22,11 +24,6 @@
     };
     vm.addMsg = addMsg;
     vm.remove  = remove;
-
-    // GET
-    // POST
-    // PUT
-    // DELETE
 
     //create a message
     function addMsg() {
@@ -40,15 +37,9 @@
       vm.allMsgs.shift();
     }
 
-    vm.state = $state.current
-    vm.params = $stateParams;
-
     //delete a message
     function remove(removeMsg) {
-      vm.allMsgs = vm.allMsgs.filter(function(msg) {
-        return hint.id != removeHint.id;
+      //ADD REMOVE FUNCTION HERE
       })
-    };
-
   };
 })();

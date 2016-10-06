@@ -5,9 +5,7 @@
     .module("chatApp")
     .controller("LoginController", LoginController);
 
-
     LoginController.$inject = ["$state", "userDataService", "$log", "$cookies"];
-
 
     function LoginController($state, userDataService, $log, $cookies) {
       var vm = this;

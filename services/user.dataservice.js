@@ -15,6 +15,7 @@
 
     return user;
 
+    //Return true if the username length is greater than 0
     function isLoggedIn() {
       if (user.name) {
         return user.name.length !== 0;

@@ -11,15 +11,19 @@
     var vm = this;
     vm.user = userDataService;
 
+    //This is where I would place call backs to the back end
+      // GET
+      // POST
+      // PUT
+      // DELETE
+
+    //hardcoded seeds
     vm.all = [
       {chatName: "Sammy and Tina", content: "Hey How are you?", participants: ["Conrad", "Andrew"]},
       {chatName: "Spanish Class 101", content: "Are you ready for the test?", participants: ["Mike", "Kate", "Ira"]},
       {chatName: "Mario Party Party", content: "The party is going to be this Friday.", participants: ["Brittany", "Storm", "Joshua"]},
       {chatName: "Mom and Dad", content: "How are you son?", participants: ["Mom", "Dad"]}
     ]
-
-    // $log.log(vm.all)
-
   }
 
 })();

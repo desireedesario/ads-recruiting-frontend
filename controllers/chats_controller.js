@@ -14,7 +14,7 @@
     vm.addChat = addChat;
     vm.newChat = {chatName: "", content: "", participants: ""};
 
-    //make sure that the
+    //make sure that the chats are working
     $log.log(vm.chat.all)
 
     function addChat(){

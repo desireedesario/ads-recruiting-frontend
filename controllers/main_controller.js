@@ -16,16 +16,10 @@
     function logOut() {
       $log.debug("Logging out:", vm.user.name);
       //deleted the name that is stored from cookies
-      $cookies.remove('userName')
+      $cookies.remove('userName');
       //when user logs in go to chats
       vm.user.name = "";
       $state.go("homePage");
-
-
     }
-
-    vm.$state = $state;
-
   }
-
 })();
