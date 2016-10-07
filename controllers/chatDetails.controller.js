@@ -1,3 +1,8 @@
+/* chatsDetails.controller.js
+   Desiree Desario
+   2016
+*/
+
 (function() {
   "use strict";
 

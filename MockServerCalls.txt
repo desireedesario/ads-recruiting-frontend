@@ -1,3 +1,8 @@
+Mock Back End Server Calls
+Desiree Desario
+2016
+
+
 vm.getAllChats = getAllChats;
 vm.newChat = {};
 vm.addChat = addChat;
