@@ -13,3 +13,5 @@ describe('chatApp homepage', function() {
 //     element(by.model("vm.userHold.name").sendKeys("Alex"));
 //   });
 // });
+
+//I am not fully experienced with testing, but I am excited for the oppurtunity to learn them. I have recently purchased Udemys Protractor full course and will be going through testing over this weekend. 
