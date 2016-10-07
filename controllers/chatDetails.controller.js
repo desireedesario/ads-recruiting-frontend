@@ -29,7 +29,6 @@
       content: ""
     };
     vm.addMsg = addMsg;
-    vm.remove  = remove;
 
     //create a message
     function addMsg() {
