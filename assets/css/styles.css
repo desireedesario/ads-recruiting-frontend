@@ -1,3 +1,5 @@
+/* unity font */
+
 @font-face {
   font-family: 'avalonbold',sans-serif;
   src: url('../fonts/Avalon Bold T..ttf');
@@ -8,6 +10,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* home.html */
 
 #heading-text {
   font-family: 'avalonbold';

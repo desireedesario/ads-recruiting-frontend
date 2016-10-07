@@ -17,6 +17,7 @@
     //make sure that the chats are iterating through
     $log.log(vm.chat.all)
 
+    //pushes each participant into an array
     function addChat(){
       vm.newChat.participants = vm.newChat.participants.split(' ');
       vm.chat.all.push(vm.newChat)

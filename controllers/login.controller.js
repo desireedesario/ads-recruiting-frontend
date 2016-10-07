@@ -23,9 +23,9 @@
         //Log in the user by updating the service's .name:
         vm.user.name = vm.userHold.name;
         vm.userHold.name = "";
-
+        //store user in cookies
         $cookies.put('userName', vm.user.name)
-
+        //when user is logged in go to chat list
         $state.go("listChats");
       };
     };

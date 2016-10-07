@@ -41,15 +41,5 @@
       vm.newMsg.content = '';
 
     }
-
-    // // caps out allMsgs at 200
-    // while (vm.allMsgs.length > 200) {
-    //   vm.allMsgs.shift();
-    // }
-
-    //delete a message
-    function remove(removeMsg) {
-      //ADD REMOVE FUNCTION HERE
-      }
   };
 })();
