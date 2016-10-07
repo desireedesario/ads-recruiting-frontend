@@ -1,25 +1,29 @@
-before each function
-1) open the browser
+INDEX.HTML
 
-index.html
-must consist of elements
-1) open the browser
-2) check if the header and footer are there
+As a user I want to open the page and see the website
+1)	open the browser
+2)	check if the header and footer are there by grabbing each element
+3)	expect to find each element on page
 
-the home.html must be active and the first page you see
-1) open the browser
-2) check if the ui-router is loading the correct PAGE
-3) check for the element
+As a user I want to open the page and see the login screen
+1)	open the browser
+2)	check if the ui-router is loading the correct PAGE
+3)	check for the element
 
-home.html
+HOME.HTML
 
-login feature
-1) open the browser
-2) enter a user name
-3) click the submit button
-4) redirect to the users chat lists
+As a user I want to be able to log in
+1)	open the browser
+2)	enter a user name with a length value larger than 0
+3)	click the submit button
+4)	redirect to the user’s chat lists
 
-login name: if the user name length is not greater than zero, user cannot log in
-1) open the browser
-2) click the submit button
-3) expect to not redirect to the homepage
+As a user, I don’t want to mess up and type nothing as my name (search for string value larger than 0). A.k.a What if the user enters nothing?
+1)	Open the browser
+2)	Enter a value of nothing as the string.
+3)	Expect the page not to redirect
+4)	Expect the page to not redirect
+
+LISTCHATS.HTML
+
+CHATDETAILS.HTML

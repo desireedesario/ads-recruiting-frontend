@@ -31,8 +31,8 @@
       vm.allMsgs.push({
       content: vm.newMsg.content
       });
-      var newContent = $.grep(vm.chat.all, function(x){return x.title == vm.title})
-      newContent.push(vm.newMsg.content)
+      var newContent = vm.chat.all.filter(function(e) {return e.title == vm.title})
+      newContent.content.push(vm.newMsg.content)
       clearForm();
     }
 
