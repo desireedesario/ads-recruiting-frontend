@@ -14,4 +14,4 @@ describe('chatApp homepage', function() {
 //   });
 // });
 
-//I am not fully experienced with testing, but I am excited for the oppurtunity to learn them. I have recently purchased Udemys Protractor full course and will be going through testing over this weekend. 
+//I am not fully experienced with testing, but I am excited for the oppurtunity to learn. I have recently purchased Udemys Protractor full course and will be going through testing as you review my assignment. 
